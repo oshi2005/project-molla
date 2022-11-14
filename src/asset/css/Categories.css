@@ -1,0 +1,76 @@
+.container-catog {
+  display: flex;
+  
+  justify-content: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+/* .catogeries {
+    display: grid;
+    grid-template:600px 300px 300px;
+    grid-gap: 20px;
+  }
+   */
+
+.l-catogeries {
+  position: relative;
+}
+.l-catogeries > img {
+  height: 655px;
+  object-fit: cover;
+}
+.l-catogeries > .content {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  line-height: 40px;
+}
+.l-catogeries > .content > span {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.l-catogeries > .content >h3{
+    color: white;
+    font-size: 3rem;
+    line-height: 70px;
+    font-weight: 500;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+.l-catogeries > .content >i{
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+.r-catogeries{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.r-catogeries>.t-catogeries>img{
+    height: 323px
+}
+.r-catogeries>.t-catogeries{
+    position: relative;
+    height: auto;
+
+
+}
+.r-catogeries>.t-catogeries>.content-t{
+    position: absolute;
+    top: 30%;left: 10%;
+    
+    
+}
+.r-catogeries>.t-catogeries>.content-t>span{
+    color: rgb(103, 99, 99);
+    line-height: 60px;
+    font-size: 1.2rem;
+}
+.r-catogeries>.t-catogeries>.content-t>h3{
+    color: black;
+    font-size: 1.7rem;
+}
