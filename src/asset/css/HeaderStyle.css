@@ -8,9 +8,15 @@
   justify-content: space-between;
 }
 .container-header > .logo > h3 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.container-header > .logo > h3>span{
+  font-size: 3rem;
+  color:#f44336
 }
 .r-container {
   display: flex;
@@ -31,6 +37,10 @@
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.r-container > .navbar > ul > li > a:hover {
+  color: #f44336;
 }
 .icon {
   display: flex;
@@ -65,6 +75,11 @@
   color: white;
   padding: 0 10px;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+.icon-cart > i:hover {
+  color: #f44336;
+  transition: all 0.3s ease;
 }
 
 .icon-cart > i > span {
@@ -73,7 +88,7 @@
   background: blue;
   position: absolute;
   right: 20%;
-  top: -40%;
+  top: -70%;
 
   font-size: 1.1rem;
 }

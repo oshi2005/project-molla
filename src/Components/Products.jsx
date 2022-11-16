@@ -2,40 +2,47 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "../asset/css/Products.css";
+import { dataProducts } from "../Sdata";
 export default function Products() {
-  const [listProducts, setlistProducts] = useState([]);
-  useEffect(() => {
-    const getProducts = async () => {
-      const resultProduct = await axios({
-        method: "get",
-        url: `https://fakestoreapi.com/products`,
-      });
-      setlistProducts(resultProduct.data);
-    };
-    getProducts();
-  }, []);
+  const [listProducts, setlistProducts] = useState(dataProducts);
+  const filterResult = (catItem) => {
+    const result = dataProducts.filter((curData) => {
+      return curData.category === catItem;
+    });
+    setlistProducts(result);
+  };
+
   return (
     <>
-    <div className="btn-all">
-        <button className="btn-p all">ALL</button>
-        <button className="btn-p men">men's clothing</button>
-        <button className="btn-p jewelery">jewelery</button>
-        <button className="btn-p electronics">electronics</button>
-        <button className="btn-p women">women's clothing</button>
+      <div className="btn-pro">
+        <button className="btn-p" onClick={() => setlistProducts(dataProducts)}>
+          All
+        </button>
+        <button className="btn-p" onClick={() => filterResult("men")}>
+          men's clothing
+        </button>
+        <button className="btn-p" onClick={() => filterResult("jewelery")}>
+          jewelery
+        </button>
+        <button className="btn-p" onClick={() => filterResult("electronics")}>
+          electronics
+        </button>
+        <button className="btn-p" onClick={() => filterResult("women")}>
+          women's clothing
+        </button>
       </div>
-    <div className="container-pro">
-      
-      {listProducts.map((product) => (
-        <div className="card">
-          <img src={product.image} alt="" />
-          <div className="price-pro">
-            <span>{product.category}</span>
-            <h2>{product.title}</h2>
-            <h3>${product.price}</h3>
+      <div className="container-pro">
+        {listProducts.map((type) => (
+          <div key={type.id} className="card">
+            <img src={type.image} alt="" />
+            <div className="price-pro">
+              <span>{type.category}</span>
+              <h2>{type.title}</h2>
+              <h3>${type.price}</h3>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </>
   );
 }

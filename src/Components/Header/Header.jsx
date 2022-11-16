@@ -4,13 +4,13 @@ export default function Header() {
   return (
     <div className="container-header">
       <div className="logo">
-        <h3>Molla</h3>
+        <h3><span>M</span>olla</h3>
       </div>
       <div className="r-container">
         <div className="navbar">
           <ul>
             <li>
-              <a href="/home">HOME</a>
+              <a href="/">HOME</a>
             </li>
             <li>
               <a href="/product">PRODUCT</a>
