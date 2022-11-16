@@ -14,6 +14,7 @@ export default function Products() {
 
   return (
     <>
+      <h3 className="heading">All Catogeries</h3>
       <div className="btn-pro">
         <button className="btn-p" onClick={() => setlistProducts(dataProducts)}>
           All

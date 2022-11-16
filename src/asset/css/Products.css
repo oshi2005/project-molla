@@ -78,3 +78,10 @@
 .btn-p:hover {
   background-color: #f44336;
 }
+.heading{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 30px;
+  color: #f44336;
+  letter-spacing: 3px;
+}
