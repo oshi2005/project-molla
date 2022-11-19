@@ -32,7 +32,7 @@
   transform: scale(1.03);
   overflow: hidden;
 }
-.container-pro > .card:hover .title{
+.container-pro > .card:hover .title {
   visibility: initial;
 }
 .container-pro > .card > .price-pro {
@@ -115,7 +115,7 @@
   height: 100%;
   background-color: black;
   opacity: 0.5;
-  transition: 0.25s;
+
   border-radius: 10px;
   z-index: -1;
 }
