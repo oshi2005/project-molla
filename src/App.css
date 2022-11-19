@@ -5,3 +5,9 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}

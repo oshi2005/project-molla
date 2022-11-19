@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 import "../asset/css/Products.css";
 import { dataProducts } from "../Sdata";
 export default function Products() {
