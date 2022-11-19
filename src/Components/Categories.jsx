@@ -1,5 +1,4 @@
 import React from "react";
-import { dataCategories } from "../Sdata";
 import "../asset/css/Categories.css";
 
 export default function Catogeries() {

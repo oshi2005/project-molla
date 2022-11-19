@@ -1,0 +1,55 @@
+.container-footter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.container-footter > .r-footter {
+  text-align: start;
+}
+.container-footter > .r-footter > h3 {
+  letter-spacing: 3px;
+  color: black;
+  font-size: 2.3rem;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.container-footter > .r-footter > h3 > span {
+  color: #f44336;
+}
+.container-footter > .r-footter > p {
+  font: 1.3rem;
+  margin-top: 15px;
+  color: #474e68;
+}
+
+.container-footter > .r-footter > h4 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+}
+.container-footter > .r-footter > h4 > span {
+  font-size: 1.2rem;
+  color: #f44336;
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+.l-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.l-footer > .col {
+  width: 100%;
+}
+.l-footer > .col > .headding {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 500;
+}
+.l-footer > .col > .text-headding {
+  font-size: 1rem;
+  color: #474e68;
+  padding: 7px 0;
+}

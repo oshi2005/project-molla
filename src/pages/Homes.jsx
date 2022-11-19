@@ -5,7 +5,7 @@ import Contact from "../Components/Contact";
 import Header from "../Components/Header/Header";
 import Products from "../Components/Products";
 import Sliderbar from "../Components/Sliderbar";
-
+import Footter from "../Components/Footter";
 export default function Homes() {
   return (
     <div>
@@ -15,6 +15,7 @@ export default function Homes() {
       <Catogeries />
       <Products />
       <Contact />
+      <Footter />
     </div>
   );
 }

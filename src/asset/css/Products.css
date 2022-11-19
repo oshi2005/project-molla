@@ -3,16 +3,16 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
   height: auto;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 50px auto;
-  gap: 10px;
+  gap: 15px;
 }
 
 .container-pro > .card {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  width: 350px;
+  gap: 2px;
+  width: 300px;
   margin: 0 auto;
   transition: all 0.3s ease;
   justify-content: center;
@@ -21,21 +21,26 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .container-pro > .card > img {
-  width: 100%;
-  height: 400px;
+  width: 80%;
+  position: relative;
+  height: 250px;
   object-fit: fill;
   background-image: cover;
   transition: all 0.3s ease;
 }
 .container-pro > .card:hover img {
-  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  overflow: hidden;
+}
+.container-pro > .card:hover .title{
+  visibility: initial;
 }
 .container-pro > .card > .price-pro {
-  width: 100%;
-  height: 170px;
+  width: 250px;
+  min-height: 150px;
   display: flex;
   align-items: center;
-  justify-content: center;
+
   flex-direction: column;
   text-align: center;
 }
@@ -48,14 +53,16 @@
 }
 .container-pro > .card > .price-pro > h2 {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 10px 0;
+  height: 70px;
 }
 .container-pro > .card > .price-pro > h3 {
   color: #205375;
   font-size: 1.4rem;
   padding: 10px 0;
   font-weight: bolder;
+  margin-top: 10px;
 }
 .btn-pro {
   width: 100%;
@@ -77,11 +84,42 @@
 }
 .btn-p:hover {
   background-color: #f44336;
+  opacity: 0.3;
 }
-.heading{
+.heading {
   font-size: 3rem;
   text-align: center;
   margin-top: 30px;
   color: #f44336;
   letter-spacing: 3px;
+}
+
+.title {
+  visibility: hidden;
+  text-align: center;
+  display: block;
+  margin-top: -40px;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  z-index: 4;
+}
+.title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  transition: 0.25s;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.title:hover:before {
+  visibility: initial;
 }

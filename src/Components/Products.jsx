@@ -35,6 +35,7 @@ export default function Products() {
         {listProducts.map((type) => (
           <div key={type.id} className="card">
             <img src={type.image} alt="" />
+            <div className="title">Thêm nhanh vào giỏ hàng</div>
             <div className="price-pro">
               <span>{type.category}</span>
               <h2>{type.title}</h2>
