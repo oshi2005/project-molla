@@ -1,7 +1,6 @@
 .container-pro {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
   height: auto;
   max-width: 1200px;
   margin: 50px auto;

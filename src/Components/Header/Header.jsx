@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../../asset/css/HeaderStyle.css";
 export default function Header() {
   return (
@@ -10,13 +12,13 @@ export default function Header() {
         <div className="navbar">
           <ul>
             <li>
-              <a href="/">HOME</a>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="/product">PRODUCT</a>
+              <Link to="/productpages">PRODUCT</Link>
             </li>
             <li>
-              <a href="/contact">CONTACT</a>
+              <Link to="/form">CONTACT</Link>
             </li>
           </ul>
         </div>
