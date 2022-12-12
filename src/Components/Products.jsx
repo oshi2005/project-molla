@@ -1,8 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addNewItems, deleteItems } from "../redux/userSlice";
 import "../asset/css/Products.css";
 import { dataProducts } from "../Sdata";
 export default function Products() {
+  // const { items } = useSelector((state, action) => state.counter);
+  const dispatch = useDispatch();
   const [listProducts, setlistProducts] = useState(dataProducts);
   const filterResult = (catItem) => {
     const result = dataProducts.filter((curData) => {
@@ -10,7 +14,6 @@ export default function Products() {
     });
     setlistProducts(result);
   };
-
   return (
     <>
       <h3 className="heading">All Catogeries</h3>
@@ -35,7 +38,9 @@ export default function Products() {
         {listProducts.map((type) => (
           <div key={type.id} className="card">
             <img src={type.image} alt="" />
-            <div className="title">Thêm nhanh vào giỏ hàng</div>
+            <div className="title" onClick={() => dispatch(addNewItems())}>
+              Thêm nhanh vào giỏ hàng
+            </div>
             <div className="price-pro">
               <span>{type.category}</span>
               <h2>{type.title}</h2>
